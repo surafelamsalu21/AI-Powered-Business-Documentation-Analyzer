@@ -31,10 +31,9 @@ logger = logging.getLogger(__name__)
 
 # Set your API keys here or use environment variables for security
 # OpenAI API key
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', 'your-openai-api-key')
 
-# Perplexity AI API key
-PERPLEXITY_API_KEY = os.getenv('PERPLEXITY_API_KEY', 'your-perplexity-api-key')
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+PERPLEXITY_API_KEY = st.secrets["PERPLEXITY_API_KEY"]
 
 # Print API keys (Note: In production, avoid printing sensitive information)
 # logger.info(f"OpenAI API Key: {OPENAI_API_KEY}")
